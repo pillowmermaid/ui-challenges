@@ -1,0 +1,39 @@
+{
+    "toolbarButtons": [
+      {
+        "label": "check in",
+        "alerts": [
+          "Scotiabank Theater",
+          "Walmart",
+          "Lee's",
+          "Eaton's Center",
+          "Sushi Time"
+        ],
+        "tag": "check-in"
+      },
+      {
+        "label": "events",
+        "alerts": [
+          "Board game night",
+          "Dining in the dark",
+          "Free pizza day",
+          "John's birthday"
+        ],
+        "tag": "events"
+      },
+      {
+        "label": "account",
+        "alerts": [],
+        "tag": "account"
+      },
+      {
+        "label": "settings",
+        "alerts": [
+          "Account",
+          "Privacy",
+          "Log Out"
+        ],
+        "tag": "settings"
+      }
+    ]
+}

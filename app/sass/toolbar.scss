@@ -1,0 +1,24 @@
+.toolbar-option {
+	.toolbar-label {
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #8E8171;
+	}
+	.alert-count {
+		width: 12px;
+	    font-size: 10px;
+	    position: relative;
+	    height: 12px;
+	    background-color: red;
+	    border-radius: 100px;
+	    color: #fff;
+	    top: -10px;
+	    display: inline-block;
+	}
+	&:hover {
+		background-color: #F8F3F0;
+	}
+	&.selected {
+		background-color: #F8F3F0;
+	}
+}

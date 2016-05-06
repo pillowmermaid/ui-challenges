@@ -8,6 +8,7 @@ import mainReducer from './reducers'
 import { toolbarInit } from './actions'
 
 import toolbar from './data/toolbar.json';
+import './animation'
 
 let store = createStore(
     mainReducer

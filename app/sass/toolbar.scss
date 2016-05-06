@@ -1,31 +1,84 @@
-.toolbar-item {
-	display: inline-block;
-	.btn {
-		.toolbar-label {
-		text-transform: uppercase;
-		font-weight: bold;
-		color: #8E8171;
+.ui-toolbar {
+	width: 600px;
+	margin: 0 auto;
+	.collapse-toolbar {
+		display: none;
+		@media (max-width: 600px) {
+			display: block;
 		}
-		.alert-count {
-			width: 12px;
-		    font-size: 10px;
-		    position: relative;
-		    height: 12px;
-		    background-color: red;
-		    border-radius: 100px;
-		    color: #fff;
-		    top: -10px;
-		    display: inline-block;
+	}
+	.toolbar-item {
+		width: 150px;
+		height: 45px;
+		display: inline-block;
+		@media (max-width: 600px) {
+			display: block;
 		}
-		&:hover {
+		.btn {
+			width: 100%;
+			height: 100%;
+			border-radius: 2px;
+			&:hover {
 				background-color: #F8F3F0;
+			}
+			&.selected {
+				background-color: #F8F3F0;
+				border-bottom: darkseagreen 3px solid;
+			}
+			.toolbar-label {
+				text-transform: uppercase;
+				font-weight: bold;
+				color: #8E8171;
+				top: 5px;
+	    		position: relative;
+			}
+			.toolbar-icon {
+				height: 24px;
+				width: 24px;
+				float: left;
+				margin-right: 0.5em;
+				display: inline-block;
+				&.check-in {
+					background-image: url('./images/checkin.svg');
+				}
+				&.events {
+					background-image: url('./images/events.svg');
+				}
+				&.account {
+					background-image: url('./images/account.svg');
+				}
+				&.settings {
+					background-image: url('./images/settings.svg');
+				}
+			}
+			.alert-count {
+				width: 12px;
+			    font-size: 10px;
+			    float: right;
+			    height: 12px;
+			    background-color: red;
+			    border-radius: 100px;
+			    color: #fff;
+			    top: -16px;
+	    		left: 2px;
+			    display: inline-block;
+			}
+			
 		}
-		&.selected {
-			background-color: #F8F3F0;
+		.alerts {
+			width: inherit;
+			position: absolute;
+			@media (max-width: 600px) {
+				display: inline-block;
+			}
+			.message {
+				border: 1px solid #eeeeee;
+				padding: 0.5em 1em;
+				&:hover {
+					background-color: #eeeeee;
+				}
+			}
 		}
 	}
-	.alerts {
-		position: absolute;
-	}
-	
 }
+

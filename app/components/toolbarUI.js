@@ -11,7 +11,8 @@ const mapStateToProps = (state) => {
 class ToolbarUI extends React.Component{
 	render(){
 		return (
-			<div className='ui-toolbar'>
+			<div className='ui-toolbar row'>
+				<div className='collapse-toolbar btn'>=</div>
 				{this.props.buttons.map(button => <Button key={button.id} {...button} />)}
 			</div>
 		);

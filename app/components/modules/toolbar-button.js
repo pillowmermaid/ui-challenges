@@ -24,19 +24,21 @@ class Button extends React.Component{
 	}
 	getAlerts(){
 		if (this.props.selected === 'selected'){
-			return this.props.alerts.map(alert => <div className='message'>{alert}</div>)
+			return this.props.alerts.map(alert => <div className='message btn'>{alert}</div>)
 		}
 	}
 	render(){
-		let toolbarOptionClass = this.props.selected + ' btn';
+		let toolbarOptionClass = 'toolbar-btn btn ' + this.props.selected;
+		let toolbarIconClass = 'toolbar-icon ' + this.props.tag;
+		let toolbarAlertsId = 'toolbar-alerts-' + this.props.tag;
 		return (
 			<div className='toolbar-item'>
 				<div className={toolbarOptionClass} onClick={() => this.props.onSelected(this.props.id)}>
-					<i className='toolbar-icon'></i>
+					<i className={toolbarIconClass}></i>
 					<span className='toolbar-label'>{this.props.label}</span>
 					{this.getNumAlerts()}
 				</div>
-				<div className='alerts'>
+				<div id={toolbarAlertsId} className='alerts'>
 					{this.getAlerts()}
 				</div>
 			</div>

@@ -1,24 +1,31 @@
-.toolbar-option {
-	.toolbar-label {
+.toolbar-item {
+	display: inline-block;
+	.btn {
+		.toolbar-label {
 		text-transform: uppercase;
 		font-weight: bold;
 		color: #8E8171;
+		}
+		.alert-count {
+			width: 12px;
+		    font-size: 10px;
+		    position: relative;
+		    height: 12px;
+		    background-color: red;
+		    border-radius: 100px;
+		    color: #fff;
+		    top: -10px;
+		    display: inline-block;
+		}
+		&:hover {
+				background-color: #F8F3F0;
+		}
+		&.selected {
+			background-color: #F8F3F0;
+		}
 	}
-	.alert-count {
-		width: 12px;
-	    font-size: 10px;
-	    position: relative;
-	    height: 12px;
-	    background-color: red;
-	    border-radius: 100px;
-	    color: #fff;
-	    top: -10px;
-	    display: inline-block;
+	.alerts {
+		position: absolute;
 	}
-	&:hover {
-		background-color: #F8F3F0;
-	}
-	&.selected {
-		background-color: #F8F3F0;
-	}
+	
 }

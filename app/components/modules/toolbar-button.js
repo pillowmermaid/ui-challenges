@@ -13,21 +13,32 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 class Button extends React.Component{
-	constructor(props) {
+	constructor(props){
 		super(props);
 		this.getNumAlerts = this.getNumAlerts.bind(this);
 	}
-	getNumAlerts() {
+	getNumAlerts(){
 		if (this.props.alerts.length> 0 && this.props.tag !== 'settings'){
 			return (<span className='alert-count'>{this.props.alerts.length}</span>)
 		}
 	}
+	getAlerts(){
+		if (this.props.selected === 'selected'){
+			return this.props.alerts.map(alert => <div className='message'>{alert}</div>)
+		}
+	}
 	render(){
-		let toolbarOptionClass = this.props.selected + ' toolbar-option btn';
+		let toolbarOptionClass = this.props.selected + ' btn';
 		return (
-			<div className={toolbarOptionClass} onClick={() => this.props.onSelected(this.props.id)}>
-				<span className='toolbar-label'>{this.props.label}</span>
-				{this.getNumAlerts()}
+			<div className='toolbar-item'>
+				<div className={toolbarOptionClass} onClick={() => this.props.onSelected(this.props.id)}>
+					<i className='toolbar-icon'></i>
+					<span className='toolbar-label'>{this.props.label}</span>
+					{this.getNumAlerts()}
+				</div>
+				<div className='alerts'>
+					{this.getAlerts()}
+				</div>
 			</div>
 		);
 	}

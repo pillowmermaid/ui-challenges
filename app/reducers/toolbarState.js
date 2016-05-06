@@ -14,7 +14,7 @@ const toolbarItem = (state, action) => {
 			)
 		}
 		case 'TOGGLE_OPTION':{
-			if(action.id !== state.id){
+			if(action.id !== state.id || action.id === state.id && state.selected === 'selected'){
 				return Object.assign({}, state, {
 					selected: selected[0]
 				})

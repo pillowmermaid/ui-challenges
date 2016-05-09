@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import AppController from './appController'
 import ToolbarUI from './toolbarUI'
-import UserSettingsUI from './userSettingsUI'
+import UserSettingsUI from './userCardUI'
 
 //css
 import '../css/styles.css'
@@ -29,7 +29,9 @@ class App extends React.Component{
 		return (
 			<div className='app-root'>
 				<AppController />
-				{activeWidget}
+				<div className='active-app'>
+					{activeWidget}
+				</div>
 			</div>
 		);
 	}

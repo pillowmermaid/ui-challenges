@@ -1,5 +1,48 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
 .app-root {
+	height: inherit;
+	background: #fe9090; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #fe9090 0%, #ff5c5c 11%, #fcaeae 35%, #fcaeae 45%, #fe9090 63%, #e5871b 97%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #fe9090 0%,#ff5c5c 11%,#fcaeae 35%,#fcaeae 45%,#fe9090 63%,#e5871b 97%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #fe9090 0%,#ff5c5c 11%,#fcaeae 35%,#fcaeae 45%,#fe9090 63%,#e5871b 97%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe9090', endColorstr='#e5871b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	.app-controller {
-		background-color: grey;
+		background-color: lighten(#F8F3F0, 1);;
+		h4 {
+			margin-top: 0;
+			padding: 12px 12px 6px 12px;
+		}
+		.app-btn-row {
+			padding-bottom: 12px;
+			div {
+				width: 48%;
+				border: 1px solid;
+				border-radius: 1px;
+			}
+			.btn {
+				background-color: whitesmoke;
+				&:hover{
+					background-color: darken(#F8F3F0, 8);
+				}
+			}
+			div:first-child {
+				margin-left: 1em;
+				margin-right: 1em;
+				@media screen and (max-width: 768px) {
+					margin-right: 0;
+				}
+				@media screen and (max-width: 414px) {
+					margin-left: 0.5em;
+				}
+			}
+		}
 	}
 }

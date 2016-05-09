@@ -1,0 +1,44 @@
+.ui-usercard {
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	@media screen and (max-width: 600px) {
+		width: 320px;
+		overflow: auto;
+	}
+	.social-tray {
+		.usercard-social:first-child {
+			margin-left: 0;
+		}
+		.usercard-social {
+			width: 105px;
+		    padding: 8px 20px;
+		    margin-left: 2px;
+		    float: left;
+			color: #ABA29B;
+			font-weight: bold;
+			font-size: 14px;
+			background-color: #F9F0EF;
+			span {
+				top: 3px;
+				position: relative;
+			}
+			.social-icon {
+				    height: 24px;
+				    width: 24px;
+				    float: left;
+				    margin-right: .5em;
+				    display: inline-block;
+				&.views {
+					background-image: url('./images/icons/view.svg');
+				}
+				&.comments {
+					background-image: url('./images/icons/comments.svg');
+				}
+				&.likes {
+					background-image: url('./images/icons/likes.svg');
+				}
+			}
+		}
+	}
+}

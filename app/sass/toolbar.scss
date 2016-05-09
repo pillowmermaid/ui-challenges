@@ -1,81 +1,119 @@
 .ui-toolbar {
 	width: 600px;
 	margin: 0 auto;
-	.collapse-toolbar {
-		display: none;
-		@media (max-width: 600px) {
-			display: block;
+	z-index: 10;
+	@media screen and (max-width: 600px) {
+		width: 100%;
+		background-color: crimson;
+	}
+	.mobile-header {
+		@media screen and (max-width: 600px) {
+			padding: 0;
+			width: 35px;
 		}
 	}
-	.toolbar-item {
-		width: 150px;
-		height: 45px;
-		display: inline-block;
-		@media (max-width: 600px) {
+	#collapse-toolbar {
+		display: none;
+		@media screen and (max-width: 600px) {
 			display: block;
-		}
-		.btn {
-			width: 100%;
-			height: 100%;
-			border-radius: 2px;
-			&:hover {
-				background-color: #F8F3F0;
+    		height: 35px;
+			background-repeat: no-repeat;
+			background-image: url('./images/icons/menu.svg');
+			&:active {
+				-webkit-box-shadow: none;
+				box-shadow: none;
 			}
-			&.selected {
+		}
+	}
+	#ui-options {
+		display: block;
+		background-color: whitesmoke;
+		@media screen and (max-width: 600px) {
+			position: fixed;
+			left: -150px;
+			height: 100%;
+		}
+		.toolbar-item {
+			width: 150px;
+			height: 45px;
+			display: inline-block;
+			@media screen and (max-width: 600px) {
+				display: block;
+			}
+			&.selected .toolbar-btn{
 				background-color: #F8F3F0;
 				border-bottom: darkseagreen 3px solid;
 			}
-			.toolbar-label {
-				text-transform: uppercase;
-				font-weight: bold;
-				color: #8E8171;
-				top: 5px;
-	    		position: relative;
-			}
-			.toolbar-icon {
-				height: 24px;
-				width: 24px;
-				float: left;
-				margin-right: 0.5em;
-				display: inline-block;
-				&.check-in {
-					background-image: url('./images/checkin.svg');
-				}
-				&.events {
-					background-image: url('./images/events.svg');
-				}
-				&.account {
-					background-image: url('./images/account.svg');
-				}
-				&.settings {
-					background-image: url('./images/settings.svg');
+			.btn {
+				width: 100%;
+				height: 100%;
+				border-radius: 2px;
+				&:active {
+					-webkit-box-shadow: none;
+					box-shadow: none;
 				}
 			}
-			.alert-count {
-				width: 12px;
-			    font-size: 10px;
-			    float: right;
-			    height: 12px;
-			    background-color: red;
-			    border-radius: 100px;
-			    color: #fff;
-			    top: -16px;
-	    		left: 2px;
-			    display: inline-block;
-			}
-			
-		}
-		.alerts {
-			width: inherit;
-			position: absolute;
-			@media (max-width: 600px) {
-				display: inline-block;
-			}
-			.message {
-				border: 1px solid #eeeeee;
-				padding: 0.5em 1em;
+			.toolbar-btn {
 				&:hover {
-					background-color: #eeeeee;
+					background-color: #F8F3F0;
+				}
+				.toolbar-label {
+					text-transform: uppercase;
+					font-weight: bold;
+					color: #8E8171;
+					top: 5px;
+		    		position: relative;
+				}
+				.toolbar-icon {
+					height: 24px;
+					width: 24px;
+					float: left;
+					margin-right: 0.5em;
+					display: inline-block;
+					&.check-in {
+						background-image: url('./images/icons/checkin.svg');
+					}
+					&.events {
+						background-image: url('./images/icons/events.svg');
+					}
+					&.account {
+						background-image: url('./images/icons/account.svg');
+					}
+					&.settings {
+						background-image: url('./images/icons/settings.svg');
+					}
+				}
+				.alert-count {
+					width: 12px;
+				    font-size: 10px;
+				    float: right;
+				    height: 12px;
+				    background-color: red;
+				    border-radius: 100px;
+				    color: #fff;
+				    top: -16px;
+		    		left: 2px;
+				    display: inline-block;
+				}
+				
+			}
+			.alerts {
+				background-color: whitesmoke;
+				width: inherit;
+				height: 0;
+				position: absolute;
+				@media screen and (max-width: 600px) {
+					display: inline-block !important;
+				}
+				.message {
+					border: 1px solid #eeeeee;
+					padding: 0.5em 1em;
+					&:hover {
+						background-color: #eeeeee;
+					}
+					&.btn {
+						height: 43px;
+					}
 				}
 			}
 		}

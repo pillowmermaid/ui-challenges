@@ -22,3 +22,21 @@ export const toggleOption = (id) => {
         id
     }
 }
+
+export const resetToolbar = () => {
+    return {
+        type: 'RESET_TOOLBAR'
+    }
+}
+
+export const getUser = (headerImg, userImg, snippet, views, comments, likes) => {
+    return {
+        type: 'GET_USER',
+        headerImg,
+        userImg,
+        snippet,
+        views,
+        comments,
+        likes
+    }
+}

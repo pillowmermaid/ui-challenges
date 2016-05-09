@@ -19,8 +19,11 @@ class AppController extends React.Component{
 	render(){
 		return (
 			<div className='app-controller'>
-				<div className='btn' onClick={() => this.props.onToggleState(1)}>View 1</div>
-				<div className='btn' onClick={() => this.props.onToggleState(2)}>View 2</div>
+				<h4>UI Challenges</h4>
+				<div className='app-btn-row'>
+					<div className='btn' onClick={() => this.props.onToggleState(1)}>Alert Menu</div>
+					<div className='btn' onClick={() => this.props.onToggleState(2)}>User Card</div>
+				</div>
 			</div>
 		);
 	}

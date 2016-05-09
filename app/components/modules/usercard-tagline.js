@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class Button extends React.Component{
 	render(){
 		return (
-			<div className='ui-button btn'>
+			<div className='usercard-user-info'>
 				Zesty
 			</div>
 		);

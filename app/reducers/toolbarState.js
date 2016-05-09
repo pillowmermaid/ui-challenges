@@ -23,6 +23,11 @@ const toolbarItem = (state, action) => {
 				selected: selected[1]
 			})
 		}
+		case 'RESET_TOOLBAR':{
+			return Object.assign({}, state, {
+				selected: selected[0]
+			})
+		}
 		default:{
 			return state
 		}
@@ -38,6 +43,9 @@ const toolbarState = (state = [], action) => {
 			]
 		}
 		case 'TOGGLE_OPTION':{
+			return state.map(i => toolbarItem(i, action))
+		}
+		case 'RESET_TOOLBAR':{
 			return state.map(i => toolbarItem(i, action))
 		}
 		default:{

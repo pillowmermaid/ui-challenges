@@ -9,13 +9,14 @@
 	.mobile-header {
 		@media screen and (max-width: 600px) {
 			padding: 0;
-			width: 35px;
+			width: 40px;
 		}
 	}
 	#collapse-toolbar {
 		display: none;
 		@media screen and (max-width: 600px) {
 			display: block;
+			margin-left: 5px;
     		height: 35px;
 			background-repeat: no-repeat;
 			background-image: url('./images/icons/menu.svg');
@@ -84,15 +85,13 @@
 					}
 				}
 				.alert-count {
-					width: 12px;
+					width: 14px;
 				    font-size: 10px;
 				    float: right;
-				    height: 12px;
+				    height: 14px;
 				    background-color: red;
 				    border-radius: 100px;
 				    color: #fff;
-				    top: -16px;
-		    		left: 2px;
 				    display: inline-block;
 				}
 				

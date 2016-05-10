@@ -1,8 +1,11 @@
 import Velocity from '../lib/velocity'
 
+/* A suite of animation methods using velocityJS for the toolbarUI
+module*/
 class toolbarAnimate {
 	constructor() {
 	}
+	//Toggles the slide menu in mobile views
 	toggleMobileTray() {
 		if(window.innerWidth < 600){
 			let $target = document.getElementById('ui-options');
@@ -22,8 +25,8 @@ class toolbarAnimate {
 		}
 		
 	}
+	//Adds a gradual slidedown animation to the menu items
 	revealAlerts(target, count, selected) {
-		console.log(selected);
 		if(target !== 'account'){
 			let $target = document.getElementById(target+'-target');
 			if(selected === 'unselected'){

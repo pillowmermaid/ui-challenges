@@ -42,6 +42,10 @@ module.exports = {
         exclude: '/node_modules/',
         include: __dirname
       },
+      { 
+        test: /\.(jpe?g|png|gif)$/, 
+        loader: 'url?limit=10000!img?progressive=true' 
+      },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "url?limit=10000"

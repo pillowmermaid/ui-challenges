@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { toggleState } from '../actions'
 
+//A simple toolbar to toggle between the two UIs
 const mapStateToProps = (state) => {
 	return{
 		appState: state.appState

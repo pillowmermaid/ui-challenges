@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 import { toggleOption, resetToolbar } from '../../actions'
 import toolBarAnimate from '../toolbarUI-animations'
 
+/* A module built out to house each menu label and 
+whatever messages they contain */
+
 const mapStateToProps = (state) => {
 	return{
 		appState: state.toolbarState
@@ -19,11 +22,13 @@ class Button extends React.Component{
 		super(props);
 		this.getNumAlerts = this.getNumAlerts.bind(this);
 	}
+	//Gets the number of alerts to display next to the button label
 	getNumAlerts(){
 		if (this.props.alerts.length> 0 && this.props.tag !== 'settings'){
 			return (<span className='alert-count'>{this.props.alerts.length}</span>)
 		}
 	}
+	//Builds a simple list of the menu items contained in the alerts
 	getAlerts(){
 		if (this.props.selected === 'selected'){
 			return this.props.alerts.map(alert => <div className='message btn' onClick={() => {toolBarAnimate.toggleMobileTray(); this.props.onSelection();}}>{alert}</div>)

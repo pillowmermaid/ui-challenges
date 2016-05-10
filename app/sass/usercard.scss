@@ -1,34 +1,89 @@
-.ui-usercard {
-	margin: 0 auto;
+#ui-usercard {
+	margin: 2em auto;
+	width: 605px;
+	overflow: auto;
 	background-color: #FFFFFF;
 	border-radius: 5px;
 	@media screen and (max-width: 600px) {
 		width: 320px;
-		overflow: auto;
+	}
+	.header-image {
+		background-image: url('./images/header.png');
+		height: 300px;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    @media screen and (max-width: 600px) {
+			height: 200px;
+		}
+	}
+	.user-info {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		color: #595145;
+		.user-icon-container {
+			display: inline-block;
+			position: relative;
+			margin-left: 2em;
+			padding: 6px;
+		    border-radius: 100px;
+		    border: 1px solid;
+		    color: lighten(#595145, 30);
+			.icon {
+				width: 100px;
+				height: 100px;
+				border-radius: 100px;
+				background-size: cover;
+				background-image: url('./images/user.jpg');
+				@media screen and (max-width: 600px) {
+					width: 75px;
+		    		height: 75px;
+				}
+			}
+		}
+		.text {
+			display: inline-block;
+			position: relative;
+			top: -60px;
+			margin-left: 2em;
+			h2 {
+				margin-bottom: 0;
+			}
+			span {
+				color: lighten(#595145, 30);
+			}
+			@media screen and (max-width: 600px) {
+				top: -40px;
+    			margin-left: 1em;
+			}
+		}
 	}
 	.social-tray {
-		.usercard-social:first-child {
+		.icon-text:first-child {
 			margin-left: 0;
 		}
-		.usercard-social {
-			width: 105px;
-		    padding: 8px 20px;
+		.icon-text {
+			width: 200px;
+		    padding: 16px 60px;
 		    margin-left: 2px;
 		    float: left;
 			color: #ABA29B;
 			font-weight: bold;
 			font-size: 14px;
 			background-color: #F9F0EF;
+			@media screen and (max-width: 600px) {
+				width: 105px;
+		    	padding: 8px 20px;
+			}
 			span {
 				top: 3px;
 				position: relative;
 			}
-			.social-icon {
-				    height: 24px;
-				    width: 24px;
-				    float: left;
-				    margin-right: .5em;
-				    display: inline-block;
+			.icon {
+				height: 24px;
+			    width: 24px;
+			    float: left;
+			    margin-right: .5em;
+			    display: inline-block;
 				&.views {
 					background-image: url('./images/icons/view.svg');
 				}
@@ -37,6 +92,9 @@
 				}
 				&.likes {
 					background-image: url('./images/icons/likes.svg');
+				}
+				&.true.likes {
+					background-image: url('./images/icons/liked.svg');
 				}
 			}
 		}

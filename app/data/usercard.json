@@ -1,6 +1,5 @@
 {
-    "header_img": "./css/images/header.jpg",
-    "user_img": "../css/images/user.jpg",
+	"user_name": "Macho Man",
     "user_snippet": "Snap into a Slim Jim!",
     "views": "172",
     "comments": "34",

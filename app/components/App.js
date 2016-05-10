@@ -13,6 +13,9 @@ const mapStateToProps = (state) => {
 	}
 }
 class App extends React.Component{
+	constructor(props) {
+		super(props);
+	}
 	render(){
 		let activeWidget = ''
 		switch(this.props.appState.appState) {

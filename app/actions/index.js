@@ -29,14 +29,19 @@ export const resetToolbar = () => {
     }
 }
 
-export const getUser = (headerImg, userImg, snippet, views, comments, likes) => {
+export const getUser = (username, snippet, views, comments, likes) => {
     return {
         type: 'GET_USER',
-        headerImg,
-        userImg,
+        username,
         snippet,
         views,
         comments,
         likes
+    }
+}
+
+export const likeUser = () => {
+    return {
+        type: 'LIKE_USER'
     }
 }
